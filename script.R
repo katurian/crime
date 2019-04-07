@@ -2,7 +2,7 @@ library(readxl)
 crimestats <- read_excel("http://katski.org/crimestats.xlsx")
 View(crimestats)
 
-library(ggplot)
+library(ggplot2)
 
 ggplot(crimestats, aes(x = density, y = crime, color = city))+
     geom_point(show.legend = FALSE) + geom_text(aes(label=city),hjust=0, vjust=0) +
